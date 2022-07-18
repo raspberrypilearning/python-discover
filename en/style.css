@@ -1,4 +1,4 @@
-/* Colour pairings */
+/*    Colour pairings */
 
 .primary {
   background: rgba(var(--primary), 1);
@@ -31,23 +31,26 @@
 /* Ribbon css */
 
 .box {
-  width: 200px; height: 300px;
+  width: 200px;
+  height: 300px;
   position: relative;
-  border: 1px solid #BBB;
-  background: #EEE;
+  border: 1px solid #bbb;
+  background: #eee;
 }
 .ribbon {
   position: absolute;
-  left: -5px; top: -5px;
+  left: -5px;
+  top: -5px;
   z-index: 1;
   overflow: hidden;
-  width: 75px; height: 75px;
+  width: 75px;
+  height: 75px;
   text-align: right;
 }
 .ribbon span {
   font-size: 1rem;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
@@ -55,15 +58,18 @@
   -webkit-transform: rotate(-45deg);
   width: 100px;
   display: block;
-  background: #79A70A;
+  background: #79a70a;
   background: linear-gradient(#000 0%, #000 100%);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 19px; left: -21px;
+  top: 19px;
+  left: -21px;
 }
 .ribbon span::before {
-  content: "";
-  position: absolute; left: 0px; top: 100%;
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid #1e5799;
   border-right: 3px solid transparent;
@@ -71,8 +77,10 @@
   border-top: 3px solid #1e5799;
 }
 .ribbon span::after {
-  content: "";
-  position: absolute; right: 0px; top: 100%;
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
   border-right: 3px solid #1e5799;
@@ -139,7 +147,7 @@ section {
   /*margin: 1rem auto;*/
 }
 
-.number::before {
+.item-number::before {
   counter-increment: number;
   content: counter(number);
   display: inline-block;
@@ -439,10 +447,10 @@ cite {
   height: 17mm;
   width: auto;
 }
-
-.inline-center {
+  
+.inline-center,
+.inline-center2 {
   display: inline-block;
-  margin-left: 3rem;
   text-align: left;
   padding-left: 0.25rem;
   width: 15rem;
@@ -450,7 +458,16 @@ cite {
   border-radius: 0.75rem;
 }
 
-.inline-center::before {
+.inline-center {
+  margin-left: 3rem;
+}
+
+.inline-center2 {
+  margin-left: 1rem;
+}
+
+.inline-center::before,
+.inline-center2::before {
   content: '🔒';
   background: #dcdcdc;
   border: 0.33rem solid #dcdcdc;
